@@ -3,14 +3,10 @@ using namespace std;
 
 int main()
 {
-    int n, result = 0;
+    int n;
     cin >> n;
     
-    for(int i = 1; i <= n; i++)
-    {
-        result += i;
-    }
-    cout << result;
+    cout << n * (n + 1) / 2;
     
     return 0;
 }
