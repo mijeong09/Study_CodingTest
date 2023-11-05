@@ -1,27 +1,23 @@
-#include <iostream> 
+#include<bits/stdc++.h>
 using namespace std;
- 
+
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-	int N, X;
-	cin >> N >> X;
- 
-	int arr[10000];
- 
-	for (int i = 0; i < N; i++) 
+    int N, X;
+    cin >> N >> X;
+    
+    int a;
+    for(int i = 0; i < N; i++)
     {
-		cin >> arr[i];
-	}
- 
-	for (int i = 0; i < N; i++) 
-    {
-		if (arr[i] < X) 
+        cin >> a;
+        
+        if(a < X)
         {
-			cout << arr[i] << " ";
-		}
-	}
-	return 0;
+            cout << a << " ";
+        }
+    }
+    return 0;
 }
