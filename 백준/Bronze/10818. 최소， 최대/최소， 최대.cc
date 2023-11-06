@@ -1,5 +1,4 @@
 #include<iostream>
-#include<algorithm>
 using namespace std;
 
 int main()
@@ -9,14 +8,21 @@ int main()
     int N;
     cin >> N;
     
-    int a[1000000];
+    int min = 1000001;
+    int max = -1000001;
+    int input;
     for(int i = 0; i < N; i++)
     {
-        cin >> a[i];
+        cin >> input;
+        if(input < min)
+        {
+            min = input;
+        }
+        if(input > max)
+        {
+            max = input;
+        }
     }
-    
-    sort(a, a + N);
-    cout << a[0] << " " << a[N - 1];
-    
+    cout << min << " " << max;
     return 0;
 }
