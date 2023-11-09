@@ -1,4 +1,5 @@
 #include<iostream>
+//#include<algorithm>
 using namespace std;
 
 int main()
@@ -12,14 +13,11 @@ int main()
         array[i] = i;
     }
     
-    int temp = 0;
     int a, b;
     for(int i = 1; i <= m; i++)
     {
         cin >> a >> b;
-        temp = array[a];
-        array[a] = array[b];
-        array[b] = temp;
+        swap(array[a], array[b]);
     }
     
     for(int i = 1; i <= n; i++)
