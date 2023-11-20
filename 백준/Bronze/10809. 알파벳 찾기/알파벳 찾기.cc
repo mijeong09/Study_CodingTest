@@ -1,27 +1,11 @@
-#include<iostream>
-#include<algorithm>
+#include <iostream>
+#include <string>
 using namespace std;
- 
-int main() 
-{
-	string S;
-	cin >> S;
- 
-	int alpa[26];
-	fill_n(alpa, 26, -1);
- 
-	for (int i = 0; i < S.length(); i++)
-	{
-		if (alpa[S[i] - 'a'] == -1)
-		{
-			alpa[S[i] - 'a'] = i;
-		}
-	}
- 
-	for (int i = 0; i < 26; i++)
-	{
-		cout << alpa[i] << ' ';
-	}
- 
-	return 0;
+int main() {
+    string s;
+    string alphabet = "abcdefghijklmnopqrstuvwxyz";
+    cin >> s;
+    for(int i = 0; i < alphabet.length(); i++)
+        cout << (int)s.find(alphabet[i]) << " ";
+    return 0;
 }
