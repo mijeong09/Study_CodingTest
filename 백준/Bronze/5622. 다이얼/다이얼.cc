@@ -1,34 +1,32 @@
-#include <iostream>
-#include <string>
+#include<iostream>
 using namespace std;
 
-int main() {
-    string word;
-    int i, count = 0;
+int main()
+{
+    string s;
+    int result = 0;
+
+    cin >> s;
     
-    cin >> word;
-    
-    for (i = 0; i < word.length(); i++) {
-        if (word[i] >= 'A' && word[i] <= 'C') {
-            count += 3;
-        } else if (word[i] >= 'D' && word[i] <= 'F') {
-            count += 4;
-        } else if (word[i] >= 'G' && word[i] <= 'I') {
-            count += 5;
-        } else if (word[i] >= 'J' && word[i] <= 'L') {
-            count += 6;
-        } else if (word[i] >= 'M' && word[i] <= 'O') {
-            count += 7;
-        } else if (word[i] >= 'P' && word[i] <= 'S') {
-            count += 8;
-        } else if (word[i] >= 'T' && word[i] <= 'V') {
-            count += 9;
-        } else if (word[i] >= 'W' && word[i] <= 'Z') {
-            count += 10;
-        }
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (s[i] >= 'A' && s[i] <= 'C')
+            result += 3;
+        else if (s[i] >= 'D' && s[i] <= 'F')
+            result += 4;
+        else if (s[i] >= 'G' && s[i] <= 'I')
+            result += 5;
+        else if (s[i] >= 'J' && s[i] <= 'L')
+            result += 6;
+        else if (s[i] >= 'M' && s[i] <= 'O')
+            result += 7;
+        else if (s[i] >= 'P' && s[i] <= 'S')
+            result += 8;
+        else if (s[i] >= 'T' && s[i] <= 'V')
+            result += 9;
+        else if (s[i] >= 'W' && s[i] <= 'Z')
+            result += 10;
     }
-    
-    cout << count;
-    
+    cout << result;
     return 0;
 }
