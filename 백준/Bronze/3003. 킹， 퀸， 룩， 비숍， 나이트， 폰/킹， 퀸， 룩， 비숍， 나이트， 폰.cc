@@ -3,17 +3,14 @@ using namespace std;
 
 int main()
 {
-    int num[6];
+    int arr[6] = {1, 1, 2, 2, 2, 8};
+    int num;
     
-    for (int i = 0; i < 6; i++)
-        cin >> num[i];
+    for(int i = 0; i < 6; i++)
+    {
+        cin >> num;
+        cout << arr[i] - num << " ";
+    }
     
-    cout << 1- num[0] << " ";
-    cout << 1- num[1] << " ";
-    cout << 2- num[2] << " ";
-    cout << 2- num[3] << " ";
-    cout << 2- num[4] << " ";
-    cout << 8- num[5];
-
     return 0;
 }
