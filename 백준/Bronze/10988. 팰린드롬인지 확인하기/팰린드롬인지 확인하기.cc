@@ -1,22 +1,18 @@
 #include<iostream>
+#include<algorithm>
 using namespace std;
 
 int main()
 {
-    string s;
+    string s, s1;
     int result = 1;
     
     cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        int j = s.length() - 1 - i;
-        
-        if (s[i] != s[j])
-        {
-            result = 0;
-            break;
-        }
-    }
+    s1 = s;
+    reverse(s1.begin(), s1.end());
+    
+    if (s != s1)
+        result = 0;
     
     cout << result;
     return 0;
