@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
     int alpha[26] = {0, };
-    int max = 0, max_Idx;
-    int count = 0;
+    int max = 0, count = 0;
+    char result;
     string s;
     
     cin >> s;
@@ -26,20 +26,15 @@ int main()
         if (alpha[i] > max)
         {
             max = alpha[i];
-            max_Idx = i;
+            result = i + 'A';
+        }
+        else if (alpha[i] == max)
+        {
+            max = alpha[i];
+            result = '?';
         }
     }
     
-    for (int i = 0; i < 26; i++)
-    {
-        if (alpha[i] == max)
-            count++;
-    }
-    
-    if (count > 1)
-        cout << '?';
-    else
-        cout << (char)(max_Idx + 65);
-    
+    cout << result;
     return 0;
 }
