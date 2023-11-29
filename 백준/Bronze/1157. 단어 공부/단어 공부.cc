@@ -3,6 +3,10 @@ using namespace std;
 
 int main()
 {
+    cin.tie(NULL);
+	cin.sync_with_stdio(false);
+	cout.sync_with_stdio(false);
+    
     int alpha[26] = {0, };
     int max = 0, count = 0;
     char result;
