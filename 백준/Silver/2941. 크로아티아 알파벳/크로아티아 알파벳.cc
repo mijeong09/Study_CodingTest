@@ -1,29 +1,25 @@
 #include<iostream>
+#include<string>
+#include<vector>
 using namespace std;
 
 int main()
 {
+    vector <string> croatia = { "c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z=" };
+    int index;
     string s;
-    
     cin >> s;
-    int cnt = s.length();
     
-    for (int i = 0; i < s.length(); i++)
+    for (int i = 0; i < croatia.size(); i++)
     {
-        if (s[i] == '=' || s[i] == '-')
+        while(1)
         {
-            if (s[i - 1] == 'z' && s[i - 2] == 'd')
-            {
-                cnt -= 2;
-            }
-            else
-                cnt--;
+            index = s.find(croatia[i]);
+            if (index == string::npos)
+                break;
+            s.replace(index, croatia[i].size(), "*");
         }
-        
-        if (s[i] == 'j')
-            if (s[i - 1] == 'l' || s[i - 1] == 'n')
-                cnt--;
     }
-    cout << cnt;
+    cout << s.length();
     return 0;
 }
