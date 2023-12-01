@@ -2,31 +2,26 @@
 #include <string>
 using namespace std;
 
-int main() {
-
+int main()
+{
+    string str;
 	int t;
 	cin >> t;
+    int cnt = t;
 
-	string str;
-	int count = 0;
-
-	for (int i = 0; i < t; i++) {
+	for (int i = 0; i < t; i++) 
+    {
 		cin >> str;
-
-		if (str.length() <= 2) {
-			continue;
-		}
-		else {
-			for (int j = 0; j < str.length() - 1; j++) {
-				if (str[j] != str[j + 1]) {
-					if (str.find(str[j], j + 2) != string::npos) {
-						count++;
+        
+			for (int j = 0; j < str.length() - 1; j++) 
+            {
+				if (str[j] != str[j + 1] && str.find(str[j], j + 2) != string::npos) 
+                {
+						cnt --;
 						break;
-					}
 				}
 			}
-		}
 	}
-	cout << t - count;
+	cout << cnt;
     return 0;
 }
