@@ -1,19 +1,15 @@
 #include<iostream>
 using namespace std;
 
-int main() {
-    int b, result = 0;
-    string n;
-    string _char = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+int b, result = 0;
+string n, _char = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+int main()
+{
     cin >> n >> b;
-
-    for (char c : n) {
-        int currentDigit = _char.find(c);
-        result = result * b + currentDigit;
-    }
-
+    
+    for (int i = 0; i < n.length(); i++)
+        result = result * b + _char.find(n[i]);
+    
     cout << result;
-
     return 0;
 }
