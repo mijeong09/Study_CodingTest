@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int x, n = 1, cnt = 1;
+int x, cnt = 1;
 int main()
 {
     cin >> x;
