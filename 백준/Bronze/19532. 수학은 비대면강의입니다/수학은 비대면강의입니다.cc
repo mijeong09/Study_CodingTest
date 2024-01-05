@@ -1,20 +1,15 @@
 #include<iostream>
 using namespace std;
 
-int a, b, c, d, e, f;
-int main() 
+int main()
 {
-	cin >> a >> b >> c >> d >> e >> f;
+	int a, b, c, d, e, f;
 
-	for (int i = -999; i <= 999; i++) 
-    {
-		for (int j = -999; j <= 999; j++) 
-        {
-			if ((i * a + j * b == c) && (i * d + j * e == f)) 
-            {
-				cout << i << " " << j;
-				return 0;
-			}
-		}
-	}
+	cin >> a >> b >> c >> d >> e >> f;
+    
+	int y = (c * d - a * f) / (b * d - a * e);
+	int x = (c * e - b * f) / (a * e - b * d);
+	
+	cout << x << ' ' << y;
+	return 0;
 }
